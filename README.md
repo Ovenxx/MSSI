@@ -58,7 +58,7 @@ scikit-learn-extra 0.3.0, networkx 3.5, pyvrp 0.11.1 and matplotlib 3.10.3.
 
 ## Random seeds
 
-In the experiments reported in the manuscript, every independent run used a
+Every independent run used a
 seed derived deterministically from the algorithm, the instance and the run
 index:
 
@@ -66,5 +66,4 @@ index:
 seed = int(hashlib.sha256(f'MSSI|{instance}|{run}'.encode()).hexdigest()[:8], 16) % 2_000_000_000 + 1
 ```
 
-with `run = 1, 2, ...`. Passing the resulting value to `--seed` reproduces the
-corresponding run. If no seed is given, the script uses 1.
+with `run = 1, 2, ...`.
